@@ -1,0 +1,99 @@
+# =========================================================================
+# General Python
+# =========================================================================
+
+# Byte-compiled / optimized / C-extensions
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+# Usually these files are created by pyinstaller, if you ever use it
+*.manifest
+*.spec
+
+
+# =========================================================================
+# Jupyter Notebooks & IDEs
+# =========================================================================
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# VS Code specific
+.vscode/
+
+# PyCharm specific
+.idea/
+
+
+# =========================================================================
+# Project-Specific Files & Data
+# =========================================================================
+
+# Large data files
+# It's a best practice not to commit large raw data files to Git.
+# If boston.csv is small (< 25MB), you can comment this out.
+# If it's large, keep it ignored and provide download instructions in your README.
+*.csv
+*.data
+*.json
+*.parquet
+
+# Model artifacts and other binary files
+# We often commit small models, but in enterprise projects, these are stored
+# in artifact registries (like MLflow, S3, GCS) and not in Git.
+# For this project, we NEED to commit them for Streamlit Cloud to work,
+# so we will explicitly UN-IGNORE them below.
+*.joblib
+*.pkl
+*.h5
+
+# Un-ignore the specific files needed for our Streamlit app to run.
+# The '!' prefix means "do not ignore this file", even if a previous
+# rule said to ignore it. This makes your intent very clear.
+!model.joblib
+!scaler.joblib
+
+# If you choose to commit your small CSV file:
+!boston.csv
+
+
+# =========================================================================
+# Virtual Environments
+# =========================================================================
+
+# Never commit your virtual environment folder.
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+
+# =========================================================================
+# Operating System files
+# =========================================================================
+.DS_Store
+Thumbs.db
